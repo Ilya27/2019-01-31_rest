@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2019-01-31_REST</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>RESTful API:Students</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Students List</div>
+                    <div class="panel-body">
+                        <div class="list-group" id="students-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Student Info</div>
+                    <div class="panel-body">
+                        <form id="form-update">
+                            <input type="hidden" name="id">
+                            <div class="form-group">
+                                <input type="text" placeholder="Firstname" name="firstname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Lastname" name="lastname" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" name="email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" placeholder="Group Id" name="group_id" disabled class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="GitLab" name="gilab" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" placeholder="Description" name="description"
+                                    class="form-control"></textarea>
+                            </div>
+    
+    
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-info" form="form-update">Update</button>
+                        <button class="btn btn-danger" id="btn-delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Add Student</div>
+                    <div class="panel-body">
+                        <form id="form-new">
+                            <input type="hidden" name="id">
+                            <div class="form-group">
+                                <input type="text" id="firstname" placeholder="Firstname" name="firstname"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="lastname" placeholder="Lastname" name="lastname"
+                                    class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email" name="email" class="form-control">
+                            </div>
+    
+                            <div class="form-group">
+                                <input type="text" placeholder="GitLab" name="gilab" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" placeholder="Description" name="description"
+                                    class="form-control"></textarea>
+                            </div>
+    
+    
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <button class="btn btn-success" id="add" form="form-new" >Create</button>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
